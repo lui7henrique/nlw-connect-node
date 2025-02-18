@@ -1,4 +1,4 @@
-POST http://localhost:3333/subscriptions
+POST http://localhost:3333/subscribe-to-event
 Content-Type: application/json
 
 {

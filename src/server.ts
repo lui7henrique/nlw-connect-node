@@ -6,10 +6,11 @@ import {
   jsonSchemaTransform,
   serializerCompiler,
   validatorCompiler,
-  ZodTypeProvider,
+  type ZodTypeProvider,
 } from "fastify-type-provider-zod";
-import { subscriptionsRoutes } from "./routes/subscriptions";
+import { subscribeToEvent } from "./routes/subscribe-to-event";
 import { env } from "./env";
+import { routes } from "./routes";
 
 const app = fastify().withTypeProvider<ZodTypeProvider>();
 
@@ -31,7 +32,7 @@ app.register(fastifySwaggerUi, {
 app.setSerializerCompiler(serializerCompiler);
 app.setValidatorCompiler(validatorCompiler);
 
-app.register(subscriptionsRoutes);
+app.register(routes);
 
 app
   .listen({
