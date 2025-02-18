@@ -8,4 +8,4 @@ Content-Type: application/json
 
 
 ####
-GET http://localhost:3333/invites/john-doe
+GET http://localhost:3333/invites/user
