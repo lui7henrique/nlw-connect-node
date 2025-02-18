@@ -8,8 +8,8 @@ import {
   validatorCompiler,
   ZodTypeProvider,
 } from "fastify-type-provider-zod";
-import z from "zod";
 import { subscriptionsRoutes } from "./routes/subscriptions";
+import { env } from "./env";
 
 const app = fastify().withTypeProvider<ZodTypeProvider>();
 
@@ -36,8 +36,8 @@ app.register(subscriptionsRoutes);
 app
   .listen({
     host: "0.0.0.0",
-    port: 3333,
+    port: env.PORT,
   })
   .then(() => {
-    console.log("HTTP server running at http://localhost:3333");
+    console.log(`HTTP server running at http://localhost:${env.PORT}`);
   });
