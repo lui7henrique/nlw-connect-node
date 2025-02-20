@@ -6,6 +6,17 @@ Content-Type: application/json
   "email": "john.doe@example.com"
 }
 
+###
+POST http://localhost:3333/subscribe-to-event
+Content-Type: application/json
+
+{
+  "name": "John Doe 3",
+  "email": "john.doe3@example.com",
+  "referrerId": "2c716427-1c08-4b6d-bca4-3cbe3b51c670"
+}
+
+
 
 ####
 GET http://localhost:3333/invites/2c716427-1c08-4b6d-bca4-3cbe3b51c670
@@ -13,3 +24,7 @@ GET http://localhost:3333/invites/2c716427-1c08-4b6d-bca4-3cbe3b51c670
 
 ### 
 GET http://localhost:3333/subscribers/2c716427-1c08-4b6d-bca4-3cbe3b51c670/ranking/clicks
+
+
+####
+GET http://localhost:3333/subscribers/2c716427-1c08-4b6d-bca4-3cbe3b51c670/ranking/count
