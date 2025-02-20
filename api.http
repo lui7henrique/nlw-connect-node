@@ -16,6 +16,16 @@ Content-Type: application/json
   "referrerId": "2c716427-1c08-4b6d-bca4-3cbe3b51c670"
 }
 
+###
+POST http://localhost:3333/subscribe-to-event
+Content-Type: application/json
+
+{
+  "name": "John Doe 4",
+  "email": "john.doe4@example.com",
+  "referrerId": "34eea686-9300-449d-9581-b484402c3c5a"
+}
+
 
 
 ####
@@ -32,4 +42,8 @@ GET http://localhost:3333/subscribers/2c716427-1c08-4b6d-bca4-3cbe3b51c670/ranki
 
 ###
 GET http://localhost:3333/subscribers/2c716427-1c08-4b6d-bca4-3cbe3b51c670/ranking/position
+
+
+###
+GET http://localhost:3333/ranking
 
