@@ -24,8 +24,8 @@ export async function getRanking() {
         score: subscriberIdAndScore[subscriber.id],
       };
     })
-    .sort((sub1, sub2) => {
-      return sub2.score - sub1.score;
+    .sort((a, b) => {
+      return b.score - a.score;
     });
 
   return { rankingWithScore };
