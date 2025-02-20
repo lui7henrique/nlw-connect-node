@@ -14,23 +14,18 @@ export const accessInviteLinkRoute: FastifyPluginAsyncZod = async (app) => {
           subscriberId: z.string(),
         }),
         response: {
-          201: z.object({
-            subscriberId: z.string(),
-          }),
+          302: z.null(),
         },
       },
     },
     async (request, reply) => {
       const { subscriberId } = request.params;
-
       await accessInviteLink({ subscriberId });
 
       const redirectUrl = new URL(env.WEB_URL);
       redirectUrl.searchParams.set("referrer", subscriberId);
 
-      // 301 is a permanent redirect
-      // 302 is a temporary redirect
-
+      // 301 permanent redirect, 302 is a temporary redirect
       return reply.redirect(redirectUrl.toString(), 302);
     }
   );
