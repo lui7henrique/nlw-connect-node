@@ -1,72 +1,45 @@
-# NLW Connect - Referral System API
+# 🎯 NLW Connect - Referral System
 
-A Node.js API for managing event subscriptions with a referral system, built with Fastify, PostgreSQL, and Redis.
+Node.js API for event subscriptions with referral system, using Fastify, PostgreSQL and Redis.
 
-## Technologies
+## 🚀 Tech Stack
 
-- Node.js
-- TypeScript
+- Node.js + TypeScript
 - Fastify
-- PostgreSQL (with Drizzle ORM)
+- PostgreSQL + Drizzle ORM
 - Redis
 - Docker
 
-## Features
+## ⚡ Features
 
-- Event subscription system
-- Referral tracking
-- Ranking system
-- API documentation with Swagger
+- 📝 Event subscriptions
+- 🔗 Referral tracking
+- 🏆 Ranking system
+- 📚 Swagger docs
 
-## Getting Started
+## 🏃‍♂️ Quick Start
 
-### Prerequisites
-
-- Node.js
-- Docker and Docker Compose
-
-### Installation
-
-1. Clone the repository
+Prerequisites: Node.js and Docker
 
 ```bash
+# Clone and install
 git clone https://github.com/lui7henrique/nlw-connect-node
-```
-
-2. Install dependencies:
-
-```bash
 bun install
-```
 
-3. Start the PostgreSQL container:
-
-```bash
+# Setup
 docker compose up -d
-```
-
-4. Copy `.env.example` to `.env` and configure your environment variables
-
-```bash
 cp .env.example .env
-```
 
-5. Run the migrations:
-
-```bash
+# Run migrations and start
 bun run db:migrate
-```
-
-6. Start:
-
-```bash
 bun run dev
 ```
 
-The API will be available at `http://localhost:3333` and the documentation at `http://localhost:3333/docs`
+Access: 
+- API: http://localhost:3333
+- Docs: http://localhost:3333/docs
 
-
-### Build
+## 📦 Build
 
 ```bash
 bun run build
