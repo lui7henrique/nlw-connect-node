@@ -8,7 +8,6 @@ import {
   validatorCompiler,
   type ZodTypeProvider,
 } from "fastify-type-provider-zod";
-import { subscribeToEvent } from "./routes/subscribe-to-event";
 import { env } from "./env";
 import { routes } from "./routes";
 
