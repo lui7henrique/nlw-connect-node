@@ -53,5 +53,5 @@ POST http://localhost:3333/send-message
 Content-Type: application/json
 
 {
-  "message": "How many subscribers do you have?"
+  "message": "What are emails of subscribers?"
 }
