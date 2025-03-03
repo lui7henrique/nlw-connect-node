@@ -47,3 +47,11 @@ GET http://localhost:3333/subscribers/2c716427-1c08-4b6d-bca4-3cbe3b51c670/ranki
 ###
 GET http://localhost:3333/ranking
 
+
+###
+POST http://localhost:3333/send-message
+Content-Type: application/json
+
+{
+  "message": "How many subscribers do you have?"
+}
