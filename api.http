@@ -55,3 +55,19 @@ Content-Type: application/json
 {
   "message": "What are emails of subscribers?"
 }
+
+###
+POST http://localhost:3333/send-message
+Content-Type: application/json
+
+{
+  "message": "How many users have gmail.com email?"
+}
+
+###
+POST http://localhost:3333/send-message
+Content-Type: application/json
+
+{
+  "message": "Please send me back the email and number of referrals for each user."
+}
