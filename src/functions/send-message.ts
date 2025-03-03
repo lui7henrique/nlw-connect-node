@@ -1,6 +1,7 @@
-import { generateText, tool } from 'ai'
+import { generateText } from 'ai'
 import { openai } from '../ai/openai'
 import { postgresTool } from '../ai/tools/postgres-tool'
+import { redisTool } from '../ai/tools/redis-tool'
 
 type SendMessageParams = {
   message: string
@@ -12,6 +13,7 @@ export async function sendMessage({ message }: SendMessageParams) {
     prompt: message,
     tools: {
       postgresTool,
+      redisTool,
     },
     system: `      
       You are a AI assistant, responsible for answering questions about a programming event.  
