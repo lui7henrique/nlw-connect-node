@@ -9,6 +9,8 @@ Node.js API for event subscriptions with referral system, using Fastify, Postgre
 - PostgreSQL + Drizzle ORM
 - Redis
 - Docker
+- OpenAI GPT-4
+- AI SDK for tool management
 
 ## ⚡ Features
 
@@ -16,6 +18,9 @@ Node.js API for event subscriptions with referral system, using Fastify, Postgre
 - 🔗 Referral tracking
 - 🏆 Ranking system
 - 📚 Swagger docs
+- 🤖 AI-powered features:
+  - Natural language report generation for referral analytics
+  - Real-time insights from Redis and PostgreSQL data
 
 ## 🏃‍♂️ Quick Start
 
