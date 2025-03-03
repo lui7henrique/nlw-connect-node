@@ -80,3 +80,19 @@ Content-Type: application/json
 {
   "message": "Please send me back the email and number of referrals for each user."
 }
+
+###
+POST http://localhost:3333/send-message
+Content-Type: application/json
+
+{
+  "message": "Who is the user with the most referrals? Show me their email and number of referrals."
+}
+
+###
+POST http://localhost:3333/send-message
+Content-Type: application/json
+
+{
+  "message": "Show me all users who haven't referred anyone yet (users with zero referrals). Return their emails."
+}

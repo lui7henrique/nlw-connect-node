@@ -7,6 +7,13 @@ async function seed() {
   console.log('🌱 Starting seeding...')
 
   try {
+    // Clean up existing data
+    console.log('🧹 Cleaning up existing data...')
+    await db.delete(subscriptions)
+    await redis.del('referral:ranking')
+    await redis.del('referral:access-count')
+    console.log('✅ Database cleanup completed')
+
     // Create 3 initial subscribers
     const initialSubscribers = Array.from({ length: 3 }, () => ({
       name: faker.person.fullName(),
@@ -39,7 +46,7 @@ async function seed() {
       // Update Redis referral ranking
       await redis.zincrby('referral:ranking', count, referrerId)
 
-      // Simulate random clicks on invite links (between 1-5 clicks per referral)
+      // Simulate random clicks on invite links (between 10-50 clicks per referral)
       const clicks = faker.number.int({ min: 10, max: 50 })
       await redis.hincrby('referral:access-count', referrerId, clicks)
     }
