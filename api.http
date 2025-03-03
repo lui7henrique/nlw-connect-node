@@ -71,3 +71,12 @@ Content-Type: application/json
 {
   "message": "Please send me back the email and number of referrals for each user."
 }
+
+
+###
+POST http://localhost:3333/send-message
+Content-Type: application/json
+
+{
+  "message": "Please send me back the email and number of referrals for each user."
+}

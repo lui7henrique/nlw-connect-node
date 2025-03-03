@@ -40,7 +40,7 @@ async function seed() {
       await redis.zincrby('referral:ranking', count, referrerId)
 
       // Simulate random clicks on invite links (between 1-5 clicks per referral)
-      const clicks = faker.number.int({ min: 1, max: 5 })
+      const clicks = faker.number.int({ min: 10, max: 50 })
       await redis.hincrby('referral:access-count', referrerId, clicks)
     }
 

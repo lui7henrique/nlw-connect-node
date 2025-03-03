@@ -23,6 +23,7 @@ export const redisTool = tool({
     args: z.array(z.string()).describe('The arguments to pass to the command'),
   }),
   execute: async ({ command, args }) => {
+    console.log({ command, args })
     const result = await redis.call(command, ...args)
     return JSON.stringify(result)
   },
